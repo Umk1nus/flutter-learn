@@ -42,18 +42,18 @@ class _AppState extends State<App> {
       home: Scaffold(
         backgroundColor: Colors.blueAccent,
         appBar: AppBar(
-          title: Text("App"),
+          title: const Text("App"),
           centerTitle: true,
         ),
         body: Center(
           child: Container(
               decoration: _loading
-                  ? BoxDecoration(
+                  ? const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage('assets/images/bg.png'),
                           fit: BoxFit.fitHeight))
                   : null,
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: _loading
                   ? Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -64,7 +64,7 @@ class _AppState extends State<App> {
                                 TextStyle(color: Colors.white, fontSize: 20)),
                       ],
                     )
-                  : Text("Press button",
+                  : const Text("Press button",
                       style: TextStyle(color: Colors.white, fontSize: 20))),
         ),
         floatingActionButton: FloatingActionButton(
@@ -73,7 +73,7 @@ class _AppState extends State<App> {
                   _loading = !_loading;
                   _updateProgress();
                 }),
-            child: Icon(Icons.cloud_download)),
+            child: const Icon(Icons.cloud_download)),
       ),
     );
   }
